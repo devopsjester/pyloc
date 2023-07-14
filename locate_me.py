@@ -23,7 +23,7 @@ if len(sys.argv) < 2:
 else:
     zipcode = sys.argv[1]
     if not re.match(r"^\d{5}(?:-\d{4})?$", zipcode):
-        print("Invalid zipcode format")
+        print(f"Invalid zipcode format: {zipcode}")
     else:
         city, state = get_location(zipcode)
         weather = get_weather(city, state)
